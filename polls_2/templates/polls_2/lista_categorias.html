@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CATEGORIAS</title>
+</head>
+<body>
+<h1>CATEGORIAS</h1><br>
+<!-- Funcoes -->
+<button><a href="{% url 'create_categoria' %}">CRIAR CATEGORIA</a></button>
+
+<hr>
+<ul>
+    {% comment %} {% for c;ategoria in categorias %} {% endcomment %}
+        {% comment %} <li>
+            <a href="{% url 'detail_categoria' id=categoria.category_id  %}"> {{ categoria.name }} </a> |
+            <a href="{% url 'update_categoria' id=categoria.category_id %}">UPDATE</a> |
+            <a href="{% url 'delete_categoria' id=categoria.category_id %}">DELETE</a> |
+        </li> {% endcomment %}
+    {% comment %} {% endfor %} {% endcomment %}
+</ul>
+</body>
+</html>
